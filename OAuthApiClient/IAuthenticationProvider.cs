@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace OAuthApiClient
 {
-    public interface IAuthenticationProvider<TTypedClient>
+    public interface IAuthenticationProvider
     {
         Task AuthenticateClient(HttpClient client);
     }

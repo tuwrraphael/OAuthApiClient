@@ -3,21 +3,23 @@ using System.Threading.Tasks;
 
 namespace OAuthApiClient
 {
-    public class BearerTokenAuthenticationProvider<TTypedClient> : IAuthenticationProvider<TTypedClient>
+    public class BearerTokenAuthenticationProvider : IAuthenticationProvider
     {
         private readonly ITokenStore tokenStore;
         private readonly ITokenStrategy tokenRenewalStrategy;
+        private readonly string tokenIdentifier;
 
-        public BearerTokenAuthenticationProvider(
-            ITokenStore tokenStore, ITokenStrategy tokenRenewalStrategy)
+        public BearerTokenAuthenticationProvider(ITokenStore tokenStore, ITokenStrategy tokenRenewalStrategy,
+            string tokenIdentifier)
         {
             this.tokenStore = tokenStore;
             this.tokenRenewalStrategy = tokenRenewalStrategy;
+            this.tokenIdentifier = tokenIdentifier;
         }
 
         public async Task AuthenticateClient(HttpClient client)
         {
-            using (var tokenTicket = await tokenStore.Get(typeof(TTypedClient).GetType().Name))
+            using (var tokenTicket = await tokenStore.Get(tokenIdentifier))
             {
                 var tokens = tokenTicket.Get();
                 if (!tokens.HasValidAccessToken)
