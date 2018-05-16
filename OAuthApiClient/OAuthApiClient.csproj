@@ -1,7 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <Authors>tuwrraphael</Authors>
+    <PackageProjectUrl>https://tuwrraphael.github.io/OAuthApiClient</PackageProjectUrl>
+    <PackageTags>oauth api client clientcredentials</PackageTags>
+    <Description>implementations of IAuthenticationProvider to use in api clients using HttpClient</Description>
+    <NeutralLanguage>en</NeutralLanguage>
+    <RepositoryUrl>https://github.com/tuwrraphael/OAuthApiClient</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="2.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
 
 </Project>
