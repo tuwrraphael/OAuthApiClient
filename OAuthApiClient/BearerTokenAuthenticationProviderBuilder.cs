@@ -15,15 +15,17 @@ namespace OAuthApiClient
             this.tokenIdentifier = tokenIdentifier;
         }
 
-        public void UseMemoryCacheTokenStore()
+        public BearerTokenAuthenticationProviderBuilder UseMemoryCacheTokenStore()
         {
             services.AddTransient<ITokenStore, MemoryCacheTokenStore>();
+            return this;
         }
 
-        public void UseClientCredentialsTokenStrategy(ClientCredentialsConfig clientCredentialsConfig)
+        public BearerTokenAuthenticationProviderBuilder UseClientCredentialsTokenStrategy(ClientCredentialsConfig clientCredentialsConfig)
         {
             factory = svc => new BearerTokenAuthenticationProvider(svc.GetService<ITokenStore>(), new ClientCredentialsTokenStrategy(clientCredentialsConfig),
                 tokenIdentifier);
+            return this;
         }
 
         public Func<IServiceProvider, IAuthenticationProvider> GetFactory() => factory;
