@@ -2,6 +2,15 @@
 This package helps to implement http api clients for apis secured using bearer token authentication.
 The package especially targets .NET Core 2.0 Web Projects.
 
+## Installing
+
+via Nuget
+~~~
+PM> Install-Package OAuthApiClient
+~~~
+
+## Sample Usage
+
 A possible client implementation looks like this:
 ~~~c#
 public interface IClient
@@ -56,7 +65,9 @@ public void ConfigureServices(IServiceCollection services)
 }
 ~~~
 
+## Remarks
 Currently supported token strategies:
 * ClientCredentials
+
 Currently supported token storing/caching methods:
 * MemoryCache
