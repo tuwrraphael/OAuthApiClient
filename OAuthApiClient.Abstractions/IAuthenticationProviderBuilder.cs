@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OAuthApiClient
+namespace OAuthApiClient.Abstractions
 {
     public interface IAuthenticationProviderBuilder
     {

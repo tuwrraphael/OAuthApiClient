@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OAuthApiClient", "OAuthApiClient\OAuthApiClient.csproj", "{9C52DF3C-91AA-4D7F-8A40-B3F36F6955D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApiClient", "TestApiClient\TestApiClient.csproj", "{B0AE6334-0012-4730-8E19-A0A2F9859784}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApiClient", "TestApiClient\TestApiClient.csproj", "{B0AE6334-0012-4730-8E19-A0A2F9859784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuthApiClient.Abstractions", "OAuthApiClient.Abstractions\OAuthApiClient.Abstractions.csproj", "{7CC548CD-F45A-4709-A7A6-559472FF7425}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B0AE6334-0012-4730-8E19-A0A2F9859784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0AE6334-0012-4730-8E19-A0A2F9859784}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0AE6334-0012-4730-8E19-A0A2F9859784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CC548CD-F45A-4709-A7A6-559472FF7425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CC548CD-F45A-4709-A7A6-559472FF7425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CC548CD-F45A-4709-A7A6-559472FF7425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CC548CD-F45A-4709-A7A6-559472FF7425}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
